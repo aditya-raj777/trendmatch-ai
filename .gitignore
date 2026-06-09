@@ -1,0 +1,11 @@
+tfenv/
+**pycache**/
+*.pyc
+
+embeddings.pkl
+filenames.pkl
+
+images/
+
+.vscode/
+.DS_Store
