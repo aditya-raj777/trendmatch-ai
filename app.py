@@ -27,7 +27,7 @@ model = tf.keras.Sequential([
     GlobalMaxPooling2D()
 ])
 
-print("✅ Model loaded successfully!")
+print("Model loaded successfully!")
 
 # Feature Extraction Function
 def extract_features(img_path, model):
@@ -57,7 +57,7 @@ for file in os.listdir('images'):
         os.path.join('images', file)
     )
 
-print(f"📁 Total Images Found: {len(filenames)}")
+print(f"Total Images Found: {len(filenames)}")
 
 # Extract Features From ALL Images
 feature_list = []
@@ -73,7 +73,7 @@ for file in tqdm(filenames):
         print(f"\n❌ Error processing {file}")
         print(e)
 
-print("\n✅ Feature extraction completed!")
+print("\nFeature extraction completed!")
 
 feature_array = np.array(feature_list)
 
@@ -91,8 +91,8 @@ pickle.dump(
     open('filenames.pkl', 'wb')
 )
 
-print("✅ embeddings.pkl saved")
-print("✅ filenames.pkl saved")
+print("embeddings.pkl saved")
+print("filenames.pkl saved")
 
 feature_list = np.array(
     pickle.load(open('embeddings.pkl','rb'))
